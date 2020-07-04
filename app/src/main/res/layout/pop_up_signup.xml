@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sign_up_dialog_button"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/sign_up_header"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Create_your_own_account"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/close_x_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/close_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_x_close" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/sign_up_dialog_button" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sign_up_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="15dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etUsernameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:helperText="@string/Username_helper_text"
+                app:helperTextTextColor="@color/sign_up_password_helper_text"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/error"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/textbox_sign_up_background"
+                    android:hint="@string/Username"
+                    android:inputType="text"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/button_sign_up_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etEmailAdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:helperText="@string/Email_helper_text"
+                app:helperTextTextColor="@color/sign_up_password_helper_text"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/error">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmailAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/textbox_sign_up_background"
+                    android:hint="@string/Email_address"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/button_sign_up_text_color"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etPassLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:helperText="@string/Password_helper_text"
+                app:helperTextTextColor="@color/sign_up_password_helper_text"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/button_sign_up_color"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/error"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:autofillHints="password"
+                    android:background="@drawable/textbox_sign_up_background"
+                    android:textColor="@color/white"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="22dp"
+                    android:textColorHint="@color/button_sign_up_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/button_sign_up_background"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:text="@string/Sign_Up_button_text"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/sign_up_footer"
+            android:gravity="center"
+            android:padding="10dp">
+
+        </View>
+
+    </LinearLayout>
+
+</LinearLayout>

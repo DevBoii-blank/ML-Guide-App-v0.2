@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "853039385210",
+    "firebase_url": "https://ml-guide-app.firebaseio.com",
+    "project_id": "ml-guide-app",
+    "storage_bucket": "ml-guide-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853039385210:android:c32169a268c378364609c3",
+        "android_client_info": {
+          "package_name": "com.example.mobilelegendsbuildguideapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853039385210-d28stvktjdod88jo1j4jtgj6ukgnk4pj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mobilelegendsbuildguideapp",
+            "certificate_hash": "abc441499515504f87597f79047883678b940e92"
+          }
+        },
+        {
+          "client_id": "853039385210-4c4ot6pil36n1cjmh1l4shsk357mqnos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWsUTsf5popmMrJa3zerNGfgqA1NeZLKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853039385210-4c4ot6pil36n1cjmh1l4shsk357mqnos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

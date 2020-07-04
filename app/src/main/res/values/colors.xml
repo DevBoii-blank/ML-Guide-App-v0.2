@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1C4576</color>
+    <color name="colorPrimaryDark">#132845</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="splashScreen_primary">#15152F</color>
+    <color name="splashscreen_primaryDark">#000001</color>
+
+    <color name="button_text_color">#A0DFED</color>
+    <color name="sign_up_bg">#163353</color>
+    <color name="sign_up_header">#1F4C76</color>
+    <color name="sign_up_footer">#132B47</color>
+
+    <color name="sign_up_password_helper_text">#A6B4D7</color>
+    <color name="sign_up_dialog_button">#194872</color>
+
+    <color name="button_sign_up_color">#8094CE</color>
+    <color name="button_sign_up_text_color">#757575</color>
+
+    <!--drawer menu color-->
+    <color name="menu_text_color">#C1C7E8</color>
+    <!--drawer menu color highlighted-->
+    <color name="menu_text_checked_color">#4284DB</color>
+    <color name="login_bottom_bg">#1D3C5E</color>
+
+    <color name="Notice_header_text">#CDE9F8</color>
+    <color name="Notice_body_text">#8EA2C7</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="error">#FF0000</color>
+</resources>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Mobile Legends Build Guide App</string>
+    <string name="developer">RENIER JAY MANGAOANG</string>
+
+    <string name="Home">Home</string>
+    <string name="Create">Create</string>
+    <string name="Emblems">Emblems</string>
+    <string name="Spells">Spells</string>
+    <string name="Heroes">Heroes</string>
+
+    <string name="Others">Others</string>
+    <string name="AboutMe">About Me</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="Okay">Okay</string>
+
+    <string name="Email_address">Email address</string>
+    <string name="Username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="forgot_password_button">Send</string>
+    <string name="forgot_password_header_text">Reset your password</string>
+    <string name="forgot_password_helper_text">Enter your email account and we\'ll send you a reset link.</string>
+
+    <string name="Sign_In">Sign In</string>
+    <string name="Username_helper_text">Enter a username. This will be displayed in public</string>
+    <string name="Email_helper_text">Sign in with your email account</string>
+    <string name="Password_helper_text">Use at least 6 characters and a mix of higher and lower case letters and numbers with no special character in it</string>
+    <string name="Sign_Up_button_text">Sign Up</string>
+    <string name="Sign_Up">Create Account</string>
+    <string name="Notice">Notice</string>
+    <string name="Notice_body_1">Alright!</string>
+    <string name="Notice_body_2">We\'ve sent you a verification link in your email</string>
+    <string name="Notice_body_3">Click the link to verify your email account then proceed to Sign in</string>
+    <string name="Create_your_own_account">Create your own Account</string>
+    <string name="login_image_description">Lesley Stellar Skin</string>
+
+    <string name="Followers">Followers</string>
+    <string name="Reputation_Pts">Reputation</string>
+    <string name="Following">Following</string>
+
+    <string name="Preference">Preferences</string>
+    <string name="Delete">Delete Account</string>
+    <string name="Sign_out">Sign Out</string>
+    <string name="Coming_Soon">More Coming Soon</string>
+    <string name="Currently_being_developed">Currently being developed . . .</string>
+
+</resources>

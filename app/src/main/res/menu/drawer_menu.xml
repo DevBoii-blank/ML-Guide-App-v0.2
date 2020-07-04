@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Home"
+            android:icon="@drawable/logo_home_ic3"
+            android:title="@string/Home" />
+
+        <item
+            android:id="@+id/nav_Create"
+            android:icon="@drawable/ic_create"
+            android:title="@string/Create" />
+
+        <item
+            android:id="@+id/nav_Emblems"
+            android:icon="@drawable/ic_emblem"
+            android:title="@string/Emblems" />
+
+        <item
+            android:id="@+id/nav_Spells"
+            android:icon="@drawable/ic_spells"
+            android:title="@string/Spells" />
+
+        <item
+            android:id="@+id/nav_Heroes"
+            android:icon="@drawable/home_ic"
+            android:title="@string/Heroes" />
+    </group>
+
+    <item android:title="@string/Others">
+        <menu>
+            <item
+                android:id="@+id/nav_aboutMe"
+                android:icon="@drawable/home_ic"
+                android:title="@string/AboutMe" />
+        </menu>
+    </item>
+
+</menu>
