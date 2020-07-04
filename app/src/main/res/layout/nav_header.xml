@@ -36,7 +36,7 @@
         android:layout_marginStart="10dp"
         android:text="@string/Username"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
