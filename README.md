@@ -1,4 +1,4 @@
-# ML-Guide-App
+# ML-Guide-App-v0.2
 A project in ITMC231 / Build Guide for ML
 
 Honor Code:
