@@ -64,4 +64,18 @@
     <string name="Enter_thoughts">Enter your Gameplan</string>
     <string name="Cancel">Cancel</string>
 
+    <string name="Tank">Tank</string>
+    <string name="Mage">Mage</string>
+    <string name="Marksman">Marksman</string>
+    <string name="Fighter">Fighter</string>
+    <string name="Assassin">Assassin</string>
+    <string name="Support">Support</string>
+
+    <string name="Execute">Execute</string>
+    <string name="Retribution">Retribution</string>
+    <string name="Petrify">Petrify</string>
+    <string name="Barrier">Barrier</string>
+    <string name="Flameshot">Flameshot</string>
+
+
 </resources>

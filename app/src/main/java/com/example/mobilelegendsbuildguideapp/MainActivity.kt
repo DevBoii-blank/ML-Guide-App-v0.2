@@ -163,10 +163,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 ).commit()
             }
             R.id.nav_Spells -> {
-                Toast.makeText(this, "Spells clicked, still being developed", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Spells clicked, still being developed", Toast.LENGTH_SHORT).show()
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fragment_container,
+                    SpellFragment()
+                ).commit()
             }
             R.id.nav_Heroes -> {
-                Toast.makeText(this, "Heroes clicked, still being developed", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, "Heroes clicked, still being developed", Toast.LENGTH_SHORT).show()
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fragment_container,
+                    HeroesFragment()
+                ).commit()
             }
             R.id.nav_aboutMe -> {
                 Toast.makeText(this, "About Me clicked, you'll know more of me soon", Toast.LENGTH_SHORT).show()

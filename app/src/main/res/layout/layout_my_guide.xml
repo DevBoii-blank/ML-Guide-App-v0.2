@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/alert_dialog_background"
     android:orientation="vertical"
     android:paddingTop="10dp"
     android:paddingBottom="25dp"
@@ -22,39 +22,41 @@
 
     <TextView
         android:id="@+id/tvEarlyGame"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/Early_Game"
         android:textSize="14sp"
-        android:textColor="@color/colorPrimaryDark"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark" />
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@drawable/textbox_background"/>
 
     <TextView
         android:id="@+id/tvMidGame"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/Mid_Game"
         android:textSize="14sp"
-        android:textColor="@color/colorPrimaryDark"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark" />
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@drawable/textbox_background"/>
 
     <TextView
         android:id="@+id/tvLateGame"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/Late_Game"
         android:textSize="14sp"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@drawable/textbox_background"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorPrimaryDark" />
 
 </LinearLayout>
