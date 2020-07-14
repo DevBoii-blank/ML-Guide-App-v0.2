@@ -1,6 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_screen_background"
+    android:fillViewport="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/sign_up_bg"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/loading" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btCreate_Guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button2_background"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/Create_guide"
+            android:textColor="@color/button_text_color"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button2_background"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/Sign_In_button"
+            android:textColor="@color/button_text_color"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <LinearLayout
+            android:id="@+id/GuideParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <TextView
+                android:id="@+id/tvCreateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/Create_title"
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etHeroNameLayout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/error"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etHeroName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/textbox_sign_up_background"
+                    android:hint="@string/Hero_name"
+                    android:inputType="text"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/button_sign_up_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvEarlyG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/Early_Game"
+                android:textAllCaps="true"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etEarlyGameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/error"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEarlyGame"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/textbox_sign_up_background"
+                    android:hint="@string/Enter_thoughts"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/button_sign_up_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvMidG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/Mid_Game"
+                android:textAllCaps="true"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etMidGameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/error"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMidGame"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/textbox_sign_up_background"
+                    android:hint="@string/Enter_thoughts"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/button_sign_up_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvLateG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/Late_Game"
+                android:textAllCaps="true"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etLateGameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/error"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLateGame"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/textbox_sign_up_background"
+                    android:hint="@string/Enter_thoughts"
+                    android:inputType="textMultiLine"
+                    android:maxLines="10"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="22dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/button_sign_up_text_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btSaveGuide"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button2_background"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/Save"
+                    android:textColor="@color/button_text_color" />
+
+                <Button
+                    android:id="@+id/btCancelGuide"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_quit_background"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/Cancel"
+                    android:textColor="@color/button_text_color" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

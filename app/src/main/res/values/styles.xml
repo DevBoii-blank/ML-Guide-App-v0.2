@@ -43,7 +43,7 @@
         <!-- Color of text and icon when SELECTED -->
         <item name="colorPrimary">@color/menu_text_color</item>
         <!-- Background color when SELECTED -->
-        <item name="colorControlHighlight">@color/menu_text_checked_color</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item><!--menu_text_checked_color-->
 
     </style>
 </resources>

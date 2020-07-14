@@ -14,9 +14,11 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".ProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
@@ -28,7 +30,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
 
             <!--
             <intent-filter>

@@ -3,10 +3,12 @@ package com.example.mobilelegendsbuildguideapp
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.example.mobilelegendsbuildguideapp.Common.Common
 import com.example.mobilelegendsbuildguideapp.Model.LoadingDialog
 import com.example.mobilelegendsbuildguideapp.Model.NoticeDialog
@@ -19,14 +21,20 @@ import com.google.firebase.ktx.Firebase
 
 class ProfileActivity : AppCompatActivity() {
 
+    lateinit var toolbar: Toolbar
+
     private lateinit var myUsername: EditText
     private lateinit var myEmail: EditText
     private  lateinit var  editButton: RelativeLayout
     private  lateinit var  saveButton: RelativeLayout
     private  lateinit var  cancelButton: RelativeLayout
-    private  lateinit var  DeleteAccount: LinearLayout
-    private  lateinit var  SignOut: LinearLayout
+    //private  lateinit var  DeleteAccount: LinearLayout
+    //private  lateinit var  SignOut: LinearLayout
     private  lateinit var  iconProfile: ImageView
+
+    //profile update
+    private  lateinit var  DeleteAccount: RelativeLayout
+    private  lateinit var  SignOut: RelativeLayout
 
     //FIREBASE
     private lateinit var auth: FirebaseAuth
@@ -41,7 +49,8 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+        //setContentView(R.layout.activity_profile)
+        setContentView(R.layout.activity_profile_update)
 
         //init firebase
         //auth = FirebaseAuth.getInstance()
@@ -54,9 +63,16 @@ class ProfileActivity : AppCompatActivity() {
         editButton = findViewById(R.id.btEditProfile)
         saveButton = findViewById(R.id.btSaveProfile)
         cancelButton = findViewById(R.id.btCancelEdit)
-        DeleteAccount = findViewById(R.id.btDelete)
-        SignOut = findViewById(R.id.btSign_Out)
+        //DeleteAccount = findViewById(R.id.btDelete)
+        //SignOut = findViewById(R.id.btSign_Out)
+        DeleteAccount = findViewById(R.id.DeleteTab)
+        SignOut = findViewById(R.id.SignOutTab)
         //iconProfile = findViewById(R.id.icon)
+        toolbar = findViewById(R.id.toolbar)
+
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
 
         editButton.setOnClickListener {
             editTheProfileAction()
@@ -94,6 +110,9 @@ class ProfileActivity : AppCompatActivity() {
         myUsername.isFocusableInTouchMode = true
         myUsername.setSelection(myUsername.text.length)
         myUsername.inputType = InputType.TYPE_CLASS_TEXT
+        //show keyboard
+        val inputMethodManager: InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.toggleSoftInputFromWindow(myUsername.applicationWindowToken, InputMethodManager.SHOW_FORCED, 0)
         myUsername.requestFocus()
         myUsername.setBackgroundResource(R.drawable.textbox_background)
 
@@ -166,14 +185,15 @@ class ProfileActivity : AppCompatActivity() {
             loadingDialog = LoadingDialog(this)
             loadingDialog.showDialog()
             auth.signOut()
-            loadingDialog.close()
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
 
+            //clear shared preferences on sign out
             val sharedPreferences: SharedPreferences = getSharedPreferences(Common.SHARED_PREFS, Context.MODE_PRIVATE)
             val editor = sharedPreferences.edit()
             editor.clear()
             editor.apply()
+            loadingDialog.close()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 
@@ -193,23 +213,27 @@ class ProfileActivity : AppCompatActivity() {
             users!!.child(userID!!).removeValue().addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     //while this delete all user's data and information stored
-                    auth.currentUser!!.delete()
+                    auth.currentUser!!.delete().addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            val notice: NoticeDialog = NoticeDialog(this)
+                            notice.showDialog(
+                                "Deleted!",
+                                "Your account has been",
+                                "Successfully Deleted.")
+                            notice.confirmButton.setOnClickListener {
+                                notice.close()
 
-                    val notice: NoticeDialog = NoticeDialog(this)
-                    notice.showDialog(
-                        "Deleted!",
-                        "Your account has been",
-                        "Successfully Deleted.")
-                    notice.confirmButton.setOnClickListener {
-                        notice.close()
+                                val sharedPreferences: SharedPreferences = getSharedPreferences(Common.SHARED_PREFS, Context.MODE_PRIVATE)
+                                val editor = sharedPreferences.edit()
+                                editor.clear()
+                                editor.apply()
 
-                        val sharedPreferences: SharedPreferences = getSharedPreferences(Common.SHARED_PREFS, Context.MODE_PRIVATE)
-                        val editor = sharedPreferences.edit()
-                        editor.clear()
-                        editor.commit()
-
-                        startActivity(Intent(baseContext, MainActivity::class.java))
-                        finish()
+                                startActivity(Intent(baseContext, MainActivity::class.java))
+                                finish()
+                            }
+                        } else {
+                            Toast.makeText(baseContext, "Account Deletion failed, " + task.exception!!.message, Toast.LENGTH_SHORT).show()
+                        }
                     }
                 } else {
                     Toast.makeText(baseContext, "Account Deletion failed, " + task.exception!!.message, Toast.LENGTH_SHORT).show()

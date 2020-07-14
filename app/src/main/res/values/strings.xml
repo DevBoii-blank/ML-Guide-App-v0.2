@@ -20,12 +20,13 @@
     <string name="Username">Username</string>
     <string name="password">Password</string>
 
-    <string name="forgot_password">Forgot your password?</string>
+    <string name="forgot_password">Forgot your password</string>
     <string name="forgot_password_button">Send</string>
     <string name="forgot_password_header_text">Reset your password</string>
     <string name="forgot_password_helper_text">Enter your email account and we\'ll send you a reset link.</string>
 
     <string name="Sign_In">Sign In</string>
+    <string name="Sign_In_button">Sign In to your account</string>
     <string name="Username_helper_text">Enter a username. This will be displayed in public</string>
     <string name="Email_helper_text">Sign in with your email account</string>
     <string name="Password_helper_text">Use at least 6 characters and a mix of higher and lower case letters and numbers with no special character in it</string>
@@ -38,14 +39,29 @@
     <string name="Create_your_own_account">Create your own Account</string>
     <string name="login_image_description">Lesley Stellar Skin</string>
 
+    <string name="Weekly_heroes">Weekly Free Heroes</string>
+
     <string name="Followers">Followers</string>
     <string name="Reputation_Pts">Reputation</string>
     <string name="Following">Following</string>
 
     <string name="Preference">Preferences</string>
+    <string name="Help_centre">Help Centre</string>
+    <string name="Account_settings">Account Settings</string>
     <string name="Delete">Delete Account</string>
     <string name="Sign_out">Sign Out</string>
     <string name="Coming_Soon">More Coming Soon</string>
     <string name="Currently_being_developed">Currently being developed . . .</string>
+
+    <string name="Create_guide">Create Guide</string>
+    <string name="My_guide">My Guides</string>
+    <string name="Create_title">What\'s your battle strategy?</string>
+    <string name="Hero_name">Hero Name</string>
+    <string name="Early_Game">Early Game</string>
+    <string name="Mid_Game">Mid Game</string>
+    <string name="Late_Game">Late Game</string>
+    <string name="Save">Save</string>
+    <string name="Enter_thoughts">Enter your Gameplan</string>
+    <string name="Cancel">Cancel</string>
 
 </resources>

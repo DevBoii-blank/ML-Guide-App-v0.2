@@ -1,20 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_screen_background"
-    tools:context=".HomeFragment"
-    android:gravity="center">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Currently_being_developed"
-        android:textSize="20sp"
-        android:textColor="@color/button_text_color"
-        android:layout_gravity="center" />
+    tools:context=".HomeFragment">
 
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/loading" />-->
+
+        <!-- <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="50dp"
+             android:text="@string/Currently_being_developed"
+             android:textSize="20sp"
+             android:textColor="@color/button_text_color"
+             android:gravity="center_horizontal"
+             android:layout_gravity="center" />-->
+
+        <LinearLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/sign_up_bg"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.40"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mobilelegends_bang_cover" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <TextView
+                android:id="@+id/WeeklyHeroes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/Weekly_heroes"
+                android:textAllCaps="true"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/WeeklyHeroes"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/martis_icon"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp"
+                    app:civ_circle_color="@color/colorPrimaryDark" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/lesley_icon"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/diggie_icon"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/aurora_icon"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/gatotkaca_icon"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/gusion_icon"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/pharsa_icon"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/valir_icon"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+        <LinearLayout
+            android:id="@+id/MyGuidelayouts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+           android:visibility="invisible"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+            <TextView
+                android:id="@+id/tvMyGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/My_guide"
+                android:layout_marginBottom="10dp"
+                android:textAllCaps="true"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MyGuidelayouts" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

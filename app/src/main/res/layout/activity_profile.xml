@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -28,49 +29,50 @@
 
     <EditText
         android:id="@+id/etUsername"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autoSizeMaxTextSize="22sp"
+        android:autoSizeMinTextSize="18sp"
         android:background="@color/colorPrimaryDark"
         android:importantForAutofill="no"
         android:inputType="none"
         android:padding="5dp"
         android:text="@string/Username"
         android:textColor="@color/white"
-        android:autoSizeMinTextSize="18sp"
-        android:autoSizeMaxTextSize="22sp"
+        android:textSize="22sp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toEndOf="@+id/profilePic"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.35000000" />
 
     <EditText
         android:id="@+id/etEmailAddress"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
         android:background="@color/colorPrimaryDark"
         android:importantForAutofill="no"
         android:inputType="none"
         android:padding="5dp"
         android:text="@string/Email_address"
         android:textColor="@color/white"
-        android:autoSizeMinTextSize="10sp"
+        android:textSize="16sp"
         android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="10sp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btCancelEdit"
         app:layout_constraintHorizontal_bias="0.01"
         app:layout_constraintStart_toEndOf="@+id/profilePic"
         app:layout_constraintTop_toBottomOf="@+id/etUsername"
-        app:layout_constraintVertical_bias="0.22000003" />
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <View
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/nav_header_background"
+        android:background="@drawable/profile_background"
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
@@ -266,11 +268,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="5dp"
         android:background="@android:color/transparent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"

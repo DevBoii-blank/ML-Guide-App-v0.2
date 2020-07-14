@@ -6,6 +6,7 @@ import java.util.regex.Pattern
 object Common {
     val user_tbl = "UsersInformation"
     val user_item_tbl = "SavedItems"
+    val guide_tbl = "BuildGuides"
     val items_tbl = "Items"
     val user_rating = "UserRateDetails"
     val item_rating = "ItemRateDetails"

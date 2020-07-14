@@ -3,6 +3,7 @@ package com.example.mobilelegendsbuildguideapp
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
@@ -64,6 +65,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         Reputation = navHeader.findViewById(R.id.tvReputationPts)
         Sign_in = navHeader.findViewById(R.id.SignIn)
 
+        //shared preferences for storing and accessing data temp
         val sharedPreferences = getSharedPreferences(Common.SHARED_PREFS, Context.MODE_PRIVATE)
         val toggle:ActionBarDrawerToggle = object:ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
             override fun onDrawerOpened(drawerView: View) {
@@ -80,7 +82,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
 
-        toolbar.setNavigationIcon(R.drawable.ic_menu_arrow)
+        //toolbar.setNavigationIcon(R.drawable.ic_menu_arrow)
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -88,6 +90,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             supportFragmentManager.beginTransaction().replace(R.id.fragment_container, HomeFragment()).commit()
             navView.setCheckedItem(R.id.nav_Home)
         }
+
     }
 
     public override fun onStart() {
